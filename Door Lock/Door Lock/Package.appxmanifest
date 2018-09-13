@@ -1,18 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 
 <Package
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
   xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-  xmlns:iot="http://schemas.microsoft.com/appx/manifest/iot/windows10"
-  IgnorableNamespaces="uap mp iot">
+  IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="Door_Lock-uwp"
+    Name="1207d76b-1bce-4476-9c8c-3bc1fd692194"
     Publisher="CN=ethan"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="05209623-a8d4-4b05-83e6-aae31ea0114b" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="1207d76b-1bce-4476-9c8c-3bc1fd692194" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>Door Lock</DisplayName>
@@ -29,24 +28,18 @@
   </Resources>
 
   <Applications>
-    <Application Id="App">
+    <Application Id="App"
+      Executable="$targetnametoken$.exe"
+      EntryPoint="Door_Lock.App">
       <uap:VisualElements
         DisplayName="Door Lock"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
         Description="Door Lock"
-        BackgroundColor="transparent"
-        AppListEntry="none">
+        BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
-      <Extensions>
-        <Extension Category="windows.backgroundTasks" EntryPoint="Door_Lock.StartupTask">
-          <BackgroundTasks>
-            <iot:Task Type="startup" />
-          </BackgroundTasks>
-        </Extension>
-      </Extensions>
     </Application>
   </Applications>
 

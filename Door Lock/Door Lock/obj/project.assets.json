@@ -25575,11 +25575,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ethan\\Documents\\Personal\\Door Lock\\Door Lock\\Door Lock\\Door Lock.csproj",
+      "projectUniqueName": "C:\\Users\\ethan\\Desktop\\Door Lock\\Door Lock\\Door Lock.csproj",
       "projectName": "Door Lock",
-      "projectPath": "C:\\Users\\ethan\\Documents\\Personal\\Door Lock\\Door Lock\\Door Lock\\Door Lock.csproj",
+      "projectPath": "C:\\Users\\ethan\\Desktop\\Door Lock\\Door Lock\\Door Lock.csproj",
       "packagesPath": "C:\\Users\\ethan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ethan\\Documents\\Personal\\Door Lock\\Door Lock\\Door Lock\\obj\\",
+      "outputPath": "C:\\Users\\ethan\\Desktop\\Door Lock\\Door Lock\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
