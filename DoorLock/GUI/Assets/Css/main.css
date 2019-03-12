@@ -2,3 +2,72 @@ html, body{
     margin: 0;
     padding: 0;
 }
+    #cardPrompt{
+
+    }
+        #cardPrompt h1{
+            margin-top: 80px;
+        }
+        img{
+          
+        }
+        @keyframes fading{0%{opacity:.6}50%{opacity:.8}100%{opacity:.6}}
+
+        .pulse {
+    
+            display: block;
+            height: 16%;
+            width: 16%;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 0 0 rgba(0, 162, 255, 0.4);
+            animation: pulse 2.1s infinite, fading 2s infinite;
+          }
+          .pulse:hover {
+            animation: none;
+          }
+          
+          @-webkit-keyframes pulse {
+            0% {
+              -webkit-box-shadow: 0 0 0 0 rgba(0, 162, 255, 0.4);
+            }
+            70% {
+                -webkit-box-shadow: 0 0 0 10px rgba(0, 162, 255, 0.4);
+            }
+            100% {
+                -webkit-box-shadow: 0 0 0 0 rgba(0, 162, 255, 0.4);
+            }
+          }
+          @keyframes pulse {
+            0% {
+              -moz-box-shadow: 0 0 0 0 rgba(0, 162, 255, 0.4);
+              box-shadow: 0 0 0 0 rgba(0, 162, 255, 0.4);
+            }
+            70% {
+                -moz-box-shadow: 0 0 0 10px rgba(0, 162, 255, 0.4);
+                box-shadow: 0 0 0 10px rgba(0, 162, 255, 0.4);
+            }
+            100% {
+                -moz-box-shadow: 0 0 0 0 rgba(0, 162, 255, 0.4);
+                box-shadow: 0 0 0 0 rgba(0, 162, 255, 0.4);
+            }
+          }
+
+          .arrow {
+            animation: MoveUpDown 1s linear infinite;
+            position: absolute;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            bottom: 0;
+            height: 17%;
+          }
+          
+          @keyframes MoveUpDown {
+            0%, 100% {
+              bottom: 0;
+            }
+            50% {
+              bottom: 20px;
+            }
+          }
