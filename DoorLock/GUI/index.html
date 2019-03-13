@@ -3,22 +3,31 @@
     <head>
         <title>Door Lock</title>
 
+        <link rel='icon' href='favicon.ico' type='image/x-icon'>
         <!--=========Stylesheets========-->
         <link rel="stylesheet" href="Assets/Css/bootstrap.min.css">
         <link rel="stylesheet" href="Assets/Css/main.css">
         <link rel="stylesheet" href="Assets/Css/sidebar.css">
-        <link rel='icon' href='favicon.ico' type='image/x-icon' >
+       
+
         <!--=========Scripts============-->
         <script src="Scripts/Js/sidebar.js"></script>
+        
+        <script>
+            if (typeof(EventSource) === "undefined" || (Object.hasOwnProperty.call(window, "ActiveXObject") && !window.ActiveXObject) ){
+                document.write("<h1 class=\"text-center\" style=\"margin-top: 10%\">This Browser is No Longer Supported</h1> <br/> <div class=\"text-center\">Please upgrade to a secure modern browser: <a href=\"https://www.google.com/chrome/\">https://www.google.com/chrome/</a> </div> ");
+                document.write('<!--');
+            }
+        </script>
     </head>
     <body>
         <header>
                 <div id="mySidebar" class="sidebar">
                         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="#">Home</a>
+                        <a href="#">Account</a>
+                        <a href="#">Admin</a>
                         <a href="#">About</a>
-                        <a href="#">Services</a>
-                        <a href="#">Clients</a>
-                        <a href="#">Contact</a>
                       </div>
                       
                       <div id="main">
@@ -29,6 +38,14 @@
             <h1 class="text-center">Please Place NFC Card on Terminal</h1>
         
                 <img src="Assets/Images/NFC.png"  style="margin: auto; display: block; margin-top: 25px;" class="pulse" >
+                <span class="text-center" id="result">
+                    <script>
+                        var source = new EventSource("Scripts/PHP/demo_sse.php");
+                        source.onmessage = function(event) {
+                            document.getElementById("result").innerHTML += event.data + "<br>";
+                        };
+                    </script>
+                </span>
             
         </div>
         <img src="Assets/Images/Arrow.png"  style="margin: auto; display: block;" class="arrow">
