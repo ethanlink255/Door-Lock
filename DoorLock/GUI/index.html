@@ -8,11 +8,14 @@
         <link rel="stylesheet" href="Assets/Css/bootstrap.min.css">
         <link rel="stylesheet" href="Assets/Css/main.css">
         <link rel="stylesheet" href="Assets/Css/sidebar.css">
-       
+        <link rel="stylesheet" href="Assets/Css/checkmark.css">
 
         <!--=========Scripts============-->
         <script src="Scripts/Js/sidebar.js"></script>
-        
+        <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
         <script>
             if (typeof(EventSource) === "undefined" || (Object.hasOwnProperty.call(window, "ActiveXObject") && !window.ActiveXObject) ){
                 document.write("<h1 class=\"text-center\" style=\"margin-top: 10%\">This Browser is No Longer Supported</h1> <br/> <div class=\"text-center\">Please upgrade to a secure modern browser: <a href=\"https://www.google.com/chrome/\">https://www.google.com/chrome/</a> </div> ");
@@ -38,14 +41,26 @@
             <h1 class="text-center">Please Place NFC Card on Terminal</h1>
         
                 <img src="Assets/Images/NFC.png"  style="margin: auto; display: block; margin-top: 25px;" class="pulse" >
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
                 <span class="text-center" id="result">
                     <script>
+
                         var source = new EventSource("Scripts/PHP/demo_sse.php");
                         source.onmessage = function(event) {
-                            document.getElementById("result").innerHTML += event.data + "<br>";
+                           if (event.data == "False"){
+                               $(".pulse").hide();
+                               $(".checkmark").show();
+                               $(".checkmark").css("animation-play-state", "running")
+                           }else{
+                               $(".checkmark").hide();
+                               $(".pulse").show();
+                           }
                         };
                     </script>
+                    
                 </span>
+                
+                
             
         </div>
         <img src="Assets/Images/Arrow.png"  style="margin: auto; display: block;" class="arrow">
