@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Door Lock</title>
+
+        <link rel='icon' href='../favicon.ico' type='image/x-icon'>
+        <!--=========Stylesheets========-->
+        <link rel="stylesheet" href="../Assets/Css/bootstrap.min.css">
+        <link rel="stylesheet" href="../Assets/Css/main.css">
+        <link rel="stylesheet" href="../Assets/Css/sidebar.css">
+        <link rel="stylesheet" href="../Assets/Css/checkmark.css">
+
+        <!--=========Scripts============-->
+        <script src="../Scripts/Js/sidebar.js"></script>
+        <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+        <script>    
+            if (typeof(EventSource) === "undefined" || (Object.hasOwnProperty.call(window, "ActiveXObject") && !window.ActiveXObject) ){
+                document.write("<h1 class=\"text-center\" style=\"margin-top: 10%\">This Browser is No Longer Supported</h1> <br/> <div class=\"text-center\">Please upgrade to a secure modern browser: <a href=\"https://www.google.com/chrome/\">https://www.google.com/chrome/</a> </div> ");
+                document.write('<!--');
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+                <div id="mySidebar" class="sidebar">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="../">Home</a>
+                        <a href="../Account">Account</a>
+                        <a href="#">Admin</a>
+                        <a href="#">About</a>
+                      </div>
+                      
+                      <div id="main">
+                        <button class="openbtn" onclick="ToggleNav()">&#9776; Door Lock</button> 
+                      </div>
+                    
+        </header>
+        <div class="container vertical-center DeadCenter">
+            <h1>Account Login</h1>
+            <small>Online Portal for Managing Door Access Accounts</small>
+            <form class="form-horizontal">
+                <div class="form-group has-success">
+                    <label for="usr">Name:</label>
+                    <input type="text" class="form-control form-control-success" id="usr">
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd">
+                  </div>
+                  <input type="submit" class="btn btn-info" value="Submit Button">
+            </form>
+        </div>
+    </body>
+</html>

@@ -16,7 +16,7 @@
   src="http://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
-        <script>
+        <script>    
             if (typeof(EventSource) === "undefined" || (Object.hasOwnProperty.call(window, "ActiveXObject") && !window.ActiveXObject) ){
                 document.write("<h1 class=\"text-center\" style=\"margin-top: 10%\">This Browser is No Longer Supported</h1> <br/> <div class=\"text-center\">Please upgrade to a secure modern browser: <a href=\"https://www.google.com/chrome/\">https://www.google.com/chrome/</a> </div> ");
                 document.write('<!--');
@@ -28,9 +28,9 @@
                 <div id="mySidebar" class="sidebar">
                         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                         <a href="#">Home</a>
-                        <a href="#">Account</a>
+                        <a href="./Account">Account</a>
                         <a href="#">Admin</a>
-                        <a href="#">About</a>
+                        <a href="./About">About</a>
                       </div>
                       
                       <div id="main">
@@ -50,7 +50,8 @@
                            if (event.data == "False"){
                                $(".pulse").hide();
                                $(".checkmark").show();
-                               $(".checkmark").css("animation-play-state", "running")
+                               $(".checkmark").css("animation-play-state", "running");
+                               $(".checkmark_check").css("animation-play-state", "running");
                            }else{
                                $(".checkmark").hide();
                                $(".pulse").show();
