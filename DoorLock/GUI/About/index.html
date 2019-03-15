@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Door Lock</title>
+
+        <link rel='icon' href='../favicon.ico' type='image/x-icon'>
+        <!--=========Stylesheets========-->
+        <link rel="stylesheet" href="../Assets/Css/bootstrap.min.css">
+        <link rel="stylesheet" href="../Assets/Css/main.css">
+        <link rel="stylesheet" href="../Assets/Css/sidebar.css">
+        <link rel="stylesheet" href="../Assets/Css/checkmark.css">
+
+        <!--=========Scripts============-->
+        <script src="../Scripts/Js/sidebar.js"></script>
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script>    
+            if (typeof(EventSource) === "undefined" || (Object.hasOwnProperty.call(window, "ActiveXObject") && !window.ActiveXObject) ){
+                document.write("<h1 class=\"text-center\" style=\"margin-top: 10%\">This Browser is No Longer Supported</h1> <br/> <div class=\"text-center\">Please upgrade to a secure modern browser: <a href=\"https://www.google.com/chrome/\">https://www.google.com/chrome/</a> </div> ");
+                document.write('<!--');
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+                <div id="mySidebar" class="sidebar">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="../">Home</a>
+                        <a href="../Account">Account</a>
+                        <a href="#">About</a>
+                </div>
+                      
+                <div id="main">
+                    <button class="openbtn" onclick="ToggleNav()">&#9776; Door Lock</button> 
+                </div>
+                    
+        </header>
+        <div class="jumbotron container" style="margin-top: 20px;">
+            <h1>NFC Based Door Lock</h1>
+            <hr>
+            <small>Web Interface and Backend Information</small>
+        </div>
+        <div class="container">
+            <p>Door lock controlled via a servo and a web interface. Web interface includes ability to adminster users, and sign in without a NFC card.</p>
+            <h3>Features Include:</h3>
+            <ul>
+                <li>Authentication Database</li>
+                <li>Easy UI Interface</li>
+                <li>Easy Startup Scripts</li>
+                <li>Intranet Security & Encryption</li>
+            </ul>
+            <p>All files are published on the git repository:</p>
+            
+        </div>
+        <div class="container" style="background-color:#e9ecef; border-radius: 25px; border: 2px solid #e9ecef; overflow:auto ">
+                <img src="../Assets/Images/GitHub-Mark/PNG/GitHub-Mark-64px.png" style="float:left; padding: 16px">
+                <div style="float:left; margin-top: 10px" class="align-middle">
+                    <p>Download repository on Github:</p>
+                    
+                    <a href="https://github.com/ethanlink255/Door-Lock">Door-Lock Git Repo</a>
+                </div>
+
+        </div>
+
+    </body>
+</html>
